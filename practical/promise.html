@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Promise</h1>
+
+
+
+    <script>
+        function promise(n1,n2){
+            const newp = new Promise((resolve,reject) => {
+                if(n1 - n2 > 0){
+                    resolve("Positive!!");
+                }
+                else {
+                    reject("Negetive!!");
+                }
+            });
+            return newp;
+        }
+
+        promise(20,10)
+        .then(value => console.log(value))
+        .catch(res => console.log(res))
+        promise(20,100)
+        .then(value => console.log(value))
+        .catch(res => console.log(res))
+    </script>
+</body>
+</html>

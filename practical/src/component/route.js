@@ -1,32 +1,33 @@
-// import react from 'react';
 import {BrowserRouter as Router, Routes ,Route,Link } from 'react-router-dom';
+
 import Home from './home';
 import About from './about';
-import User from './user';
+// import Contact from './contact';
+import User from "./user";
 
-export default function Rout(){
-    return (
+function Rout() {
+  return (
+    <div className="App">
       <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/users">Users</Link>
-              </li>
-            </ul>
-          </nav>
-          <Routes>
-            <Route exact path ="/"><Home  /></Route>
-            <Route exact path ="/about"><About  /></Route>
-            <Route exact path ="/users"><User  /></Route>
-          </Routes>
-        </div>
+        <ul>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/user">User</Link>
+          </li>
+        </ul>
+        <Routes>
+         <Route exact path='/home' element={< Home />}></Route>
+          <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/user" element={<User/>}></Route>
+        </Routes>
       </Router>
-    );
+    </div>
+  );
 }
+
+export default Rout;
