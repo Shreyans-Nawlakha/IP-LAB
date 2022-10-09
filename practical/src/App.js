@@ -1,8 +1,10 @@
-import Rout from "./component/route";
+import Hook from "./component/hook";
+// import Rout from "./component/route";
 function App() {
   return (
     <div className="App">
-      <Rout />
+      {/* <Rout /> */}
+      <Hook />
     </div>
   );
 }
