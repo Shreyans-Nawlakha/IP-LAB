@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch in JS</title>
+</head>
+<body>
+    <h1> Cat Facts </h1>
+    <button class="submit">Click</button>
+    <h1 class="inp"></h1>
+
+    <script>
+        let value;
+        let h1 = document.getElementById('inp');
+        let btn = document.getElementById('submit');
+        // console.log(value)
+        btn.addEventListener('click',()=>{
+            fetch("https://catfact.ninja/fact")
+            .then((response) => response.json())
+            .then((data) => {
+            h1.innetText=data.fact;
+            });
+        })
+    </script>
+</body>
+</html>
