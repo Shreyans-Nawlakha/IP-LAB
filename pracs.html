@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+
+
+    <script>
+        //! if else= make a greeting good day if hours is less than 18
+        //! for print prime nuimbers for range
+        let hours = 20;
+        if (hours < 18){
+            console .log("Good Day")
+        }
+        else{
+            console.log("Good Evening")
+        }
+
+        // for loops using prime numbers
+        for(let i=2; i< 20; i++){
+            let c=0;
+            for(let j=1; j<i; j++){
+                if(i%j == 0){
+                    c++;
+                }    
+            }
+            if(c==1){
+                console.log(i)
+            }
+        }
+
+        //functions
+        function sum(a,b){
+            console.log( "sum = "+ (a+b))
+        }
+        sum(10,20)
+        
+        // for of 
+        console.log("for.. of")
+
+        let a = [2,4,6,8,10]
+        for (ind of a) console.log(ind)
+
+        //for each
+        console.log("for .. each")
+        a.forEach(Element => {
+            console.log(Element**2)
+        })
+
+        console.log("for .. in")
+        for(i in a){
+            console.log(a[i] * 2)
+        }
+
+        console.log("iterators")
+        let iter=a[Symbol.iterator]()
+        let z = a.length
+        for(m=0;m<=z;m++){
+            console.log(iter.next())
+        }
+
+        // for(ind of a){
+            // console.log()
+        
+    </script>
+</body>
+</html>
